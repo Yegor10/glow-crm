@@ -1,0 +1,70 @@
+site_name: GlowCRM
+site_description: Telegram CRM-бот для запису на сеанси макіяжу (aiogram 3)
+site_url: https://yegor10.github.io/glow-crm/
+repo_url: https://github.com/Yegor10/glow-crm
+repo_name: Yegor10/glow-crm
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: uk
+  icon:
+    logo: material/face-woman-shimmer
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Темна тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Світла тема
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+nav:
+  - Головна: index.md
+  - Архітектура: ARCHITECTURE.md
+  - Конфігурація: CONFIGURATION.md
+  - Користувачам: USER_GUIDE.md
+  - Адміністраторам: ADMIN_GUIDE.md
+  - Розгортання: DEPLOYMENT.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: uk
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Yegor10/glow-crm
+
+copyright: Copyright &copy; 2026 GlowCRM

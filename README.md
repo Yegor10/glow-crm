@@ -10,6 +10,7 @@
   <img alt="SQLAlchemy" src="https://img.shields.io/badge/SQLAlchemy-2.0-D71F00">
   <img alt="SQLite" src="https://img.shields.io/badge/SQLite-WAL-003B57?logo=sqlite&logoColor=white">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+  <a href="https://yegor10.github.io/glow-crm/"><img alt="Docs" src="https://img.shields.io/badge/docs-GitHub%20Pages-blue"></a>
 </p>
 
 ---
@@ -185,13 +186,18 @@ glow-crm/
 
 ## Документація
 
+**Веб-сайт документації:** [https://yegor10.github.io/glow-crm/](https://yegor10.github.io/glow-crm/)
+
 | Документ | Про що |
 |----------|--------|
+| [docs/index.md](docs/index.md) | Головна сторінка документації |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Архітектура, модель даних, потоки взаємодії |
 | [docs/CONFIGURATION.md](docs/CONFIGURATION.md) | Усі змінні `.env`, керування адмінами |
 | [docs/USER_GUIDE.md](docs/USER_GUIDE.md) | Інструкція для клієнтів |
 | [docs/ADMIN_GUIDE.md](docs/ADMIN_GUIDE.md) | Інструкція для адміністраторів |
 | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Розгортання: systemd, Docker, оновлення |
+
+Локальний перегляд: `pip install -r requirements-docs.txt && mkdocs serve`
 
 ---
 

@@ -1,0 +1,5 @@
+docs: додати сайт документації на GitHub Pages (MkDocs Material)
+
+- головна сторінка docs/index.md та mkdocs.yml (тема Material, українська);
+- GitHub Actions workflow для автодеплою на Pages;
+- посилання на документацію в README.
