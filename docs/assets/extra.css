@@ -1,0 +1,203 @@
+/* ============================================================
+   GlowCRM — кастомна помаранчева тема для документації
+   ============================================================ */
+
+:root {
+  --glow-orange-1: #ff8a00;
+  --glow-orange-2: #ff5e3a;
+  --glow-orange-3: #ffb347;
+  --glow-amber: #ffd166;
+  --glow-grad: linear-gradient(135deg, #ff8a00 0%, #ff5e3a 60%, #ff3d77 100%);
+  --glow-grad-soft: linear-gradient(135deg, #fff3e6 0%, #ffe8d6 100%);
+}
+
+/* ── Палітра світлої теми ── */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ff6a1a;
+  --md-primary-fg-color--light: #ff8a00;
+  --md-primary-fg-color--dark: #e6531a;
+  --md-accent-fg-color: #ff7a18;
+  --md-typeset-a-color: #e6531a;
+  --md-default-bg-color: #fffaf5;
+}
+
+/* ── Палітра темної теми ── */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #ff7a18;
+  --md-primary-fg-color--light: #ffb347;
+  --md-primary-fg-color--dark: #cc5200;
+  --md-accent-fg-color: #ffb347;
+  --md-typeset-a-color: #ffb347;
+  --md-default-bg-color: #16110d;
+  --md-default-bg-color--light: #1e1813;
+  --md-code-bg-color: #211a14;
+}
+
+/* ── Шапка з градієнтом ── */
+.md-header {
+  background: var(--glow-grad);
+  box-shadow: 0 2px 16px rgba(255, 94, 58, 0.35);
+}
+.md-tabs {
+  background: transparent;
+}
+[data-md-color-scheme="slate"] .md-header {
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Кнопки ── */
+.md-typeset .md-button {
+  border-radius: 999px;
+  border: 2px solid var(--md-primary-fg-color);
+  font-weight: 700;
+  padding: 0.5em 1.4em;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.md-typeset .md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 94, 58, 0.35);
+}
+.md-typeset .md-button--primary {
+  background: var(--glow-grad);
+  border-color: transparent;
+  color: #fff;
+}
+.md-typeset .md-button--primary:hover {
+  background: linear-gradient(135deg, #ff7a18 0%, #ff3d77 100%);
+  color: #fff;
+}
+
+/* ── Заголовок головної сторінки з градієнтним текстом ── */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.md-content h1:first-of-type {
+  background: var(--glow-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.6rem;
+}
+
+/* ── Підкреслення заголовків розділів ── */
+.md-typeset h2 {
+  font-weight: 800;
+  padding-bottom: 0.2em;
+  border-bottom: 3px solid transparent;
+  border-image: var(--glow-grad);
+  border-image-slice: 1;
+  display: inline-block;
+}
+
+/* ── Посилання-якорі ── */
+.md-typeset a {
+  text-decoration-color: rgba(255, 122, 24, 0.4);
+}
+
+/* ── Таблиці ── */
+.md-typeset table:not([class]) {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(255, 122, 24, 0.12);
+  border: 1px solid rgba(255, 122, 24, 0.18);
+}
+.md-typeset table:not([class]) th {
+  background: var(--glow-grad);
+  color: #fff;
+  font-weight: 700;
+}
+.md-typeset table:not([class]) tr:hover {
+  background: rgba(255, 138, 0, 0.07);
+}
+
+/* ── Блоки коду ── */
+.md-typeset pre > code {
+  border-radius: 12px;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+.md-typeset code {
+  border-radius: 6px;
+}
+
+/* ── Навігація: активний пункт ── */
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+}
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* ── Бічна навігація: акцентна смужка активного розділу ── */
+.md-nav__item--active > .md-nav__link {
+  border-left: 3px solid var(--md-primary-fg-color);
+  padding-left: 0.6rem;
+}
+
+/* ── Пошук ── */
+.md-search__input {
+  border-radius: 999px;
+}
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Виноски / admonitions у помаранчевих тонах ── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 12px;
+  border-left-width: 4px;
+}
+.md-typeset .admonition.note,
+.md-typeset .admonition.info {
+  border-left-color: var(--glow-orange-1);
+}
+.md-typeset .note > .admonition-title,
+.md-typeset .info > .admonition-title {
+  background: rgba(255, 138, 0, 0.12);
+}
+
+/* ── Прокручувана смуга прогресу (instant.progress) ── */
+.md-progress {
+  background: var(--glow-grad);
+}
+
+/* ── Картки можливостей на головній (списки під h3) ── */
+.md-content h3 {
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+}
+
+/* ── Футер ── */
+.md-footer {
+  background: linear-gradient(135deg, #2b1a10 0%, #3a2113 100%);
+}
+.md-footer-meta {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ── Скролбар (webkit) ── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--glow-grad);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 138, 0, 0.08);
+}
+
+/* ── Логотип легке сяйво ── */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  filter: drop-shadow(0 0 6px rgba(255, 209, 102, 0.6));
+}
+
+/* ── Виділення тексту ── */
+::selection {
+  background: rgba(255, 94, 58, 0.28);
+}
